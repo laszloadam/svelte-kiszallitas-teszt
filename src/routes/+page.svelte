@@ -1,59 +1,54 @@
-<script>
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
+<script lang="ts">
+	import TopAppBar, { Row, Section, Title } from '@smui/top-app-bar';
+
+let prominent = false;
+	let dense = false;
+	let secondaryColor = false;
 </script>
 
-<svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
-</svelte:head>
-
-<section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
-		</span>
-
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
-	<Counter />
-</section>
+<div class="flexy">
+	<div class="top-app-bar-container flexor">
+		<TopAppBar
+			variant="static"
+			{prominent}
+			{dense}
+			color={secondaryColor ? 'secondary' : 'primary'}
+		>
+			<Row>
+				<Section>
+					<Title>Flex Static</Title>
+				</Section>
+			</Row>
+		</TopAppBar>
+		<div class="flexor-content">
+			<h1>Welcome to SvelteKit</h1>
+			<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+		</div>
+	</div>
+</div>
 
 <style>
-	section {
+	.top-app-bar-container {
+		width: 100vw;
+		height: 100vh;
+		overflow: auto;
+		display: inline-block;
+	}
+
+	.flexy {
 		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.flexor {
+		display: inline-flex;
 		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
 	}
 
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
+	.flexor-content {
+		flex-basis: 0;
 		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
+		flex-grow: 1;
+		overflow: auto;
 	}
 </style>
