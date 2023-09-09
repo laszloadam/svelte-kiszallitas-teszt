@@ -1,11 +1,7 @@
 <script lang="ts">
-
+	import FullCalendar from './FullCalendar.svelte';
 </script>
 
-<div>
-Hello world!
-</div>
+<h1 class="text-center mt-3">Kiszállítási naptár</h1>
 
-<style>
-	
-</style>
+<FullCalendar />
