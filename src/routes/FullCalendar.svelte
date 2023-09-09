@@ -20,12 +20,5 @@
 </script>
 
 <div class="d-flex justify-content-center">
-	<div id="calendar" />
+	<div id="calendar" class="w-50 h-100" />
 </div>
-
-<style>
-	#calendar {
-		width: 50%;
-		height: 50%;
-	}
-</style>
