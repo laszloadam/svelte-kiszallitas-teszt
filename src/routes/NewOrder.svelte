@@ -40,7 +40,7 @@
 	function removeRecord() {
 		Megnevezes = null;
 		Leiras = null;
-		VarhatoKiszallitasIdeje = new Date();
+		VarhatoKiszallitasIdeje = null;
 		SzallitasiCim = null;
 		CsomagSuly = null;
 	}
