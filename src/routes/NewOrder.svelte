@@ -105,7 +105,7 @@
 </Dialog>
 
 <style>
-	 :global(input) {
+	:global(input) {
 		height: 56px;
 		width: 100% !important;
 		border-color: #9e9e9e !important;
