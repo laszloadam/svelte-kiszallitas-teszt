@@ -25,16 +25,6 @@ npm run dev
 npm run dev -- --open
 ```
 
-## Json-server run
-
-```bash
-Install JSON server
-npm install -g json-server
-
-# or start the server and open the app in a new browser tab
-json-server --watch src/database/db.json
-```
-
 ## Building
 
 To create a production version of your app:
