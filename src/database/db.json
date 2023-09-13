@@ -1,0 +1,63 @@
+{
+  "events": [
+    {
+      "title": "The Title3",
+      "leiras": "valami leírás",
+      "start": "2023-08-31",
+      "szallitasiCim": "ddd",
+      "csomagSuly": 55,
+      "id": 1,
+      "statusz": "elfogadva"
+    },
+    {
+      "id": 2,
+      "title": "The Title2",
+      "leiras": "valami leírás",
+      "start": "2023-09-08",
+      "szallitasiCim": "ddd",
+      "csomagSuly": 5,
+      "statusz": "elfogadva"
+    },
+    {
+      "title": "asd333",
+      "leiras": "valami leírás",
+      "start": "2023-09-08",
+      "szallitasiCim": "asd",
+      "csomagSuly": 5,
+      "id": 3,
+      "statusz": "elutasitott"
+    },
+    {
+      "title": "Animék",
+      "leiras": "asd",
+      "szallitasiCim": "asd",
+      "csomagSuly": "asd",
+      "start": "2023-10-06",
+      "id": 7,
+      "statusz": "kezbesitve"
+    },
+    {
+      "title": "próba235",
+      "leiras": "asd",
+      "start": "2023-09-15",
+      "szallitasiCim": "haza",
+      "csomagSuly": "asd",
+      "id": 8,
+      "statusz": "uton"
+    },
+    {
+      "szallitasiCim": "aaaaa",
+      "start": "2023-08-04",
+      "title": "aaaaa",
+      "id": 9,
+      "statusz": "elfogadva"
+    },
+    {
+      "title": "teszt22",
+      "start": "2023-09-09",
+      "szallitasiCim": "d",
+      "id": 10,
+      "statusz": "elfogadva"
+    }
+  ]
+}
