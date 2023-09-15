@@ -1,18 +1,21 @@
-<script async script lang="ts">
+<script lang="ts">
 	import { createEventDispatcher, onMount } from 'svelte';
 	import Dialog, { Title, Content } from '@smui/dialog';
-	import { openDialog, isFormValid } from '$lib/store';
-	import { serviceHideDialog, serviceSave, serviceDeleteEvent } from '$lib/services/service';
-	import { get } from 'svelte/store';
+	import { openDialog } from '$lib/store';
+	import { serviceHideDialog, serviceSave, serviceDeleteEvent, checkFormValidity } from '$lib/services/service';
 
 	export let record: any = {};
 
 	const dispatch = createEventDispatcher();
 
-	let isValid = get(isFormValid);
+	let isValid = checkFormValidity(document.querySelector('form'));
 	let open: boolean;
 
 	openDialog.subscribe((value) => (open = value));
+
+	onMount(async () => {
+		isValid = checkFormValidity(document.querySelector('form'));
+	});
 
 	async function save(event: any) {
 		serviceSave(record);
@@ -22,11 +25,7 @@
 
 	function handleInput(event: any) {
 		record[event.target.name] = event.target.value ?? '';
-		let form: any = document.querySelector('form');
-		if (form) {
-			isFormValid.update(() => form.checkValidity());
-			isValid = form.checkValidity();
-		}
+		isValid = checkFormValidity(document.querySelector('form'));
 	}
 
 	function hideDialog() {
@@ -86,10 +85,9 @@
 					on:input={handleInput}
 					value={record?.start ?? null}
 					placeholder="év.hónap.nap"
-					required
 				/>
 				<div class="invalid-feedback">Kérem adjon meg egy szállítási dátumot.</div>
-				<label for="start">Várható kiszállítás időpontja *</label>
+				<label for="start">Várható kiszállítás időpontja</label>
 			</div>
 			<div class="form-floating mb-3">
 				<input

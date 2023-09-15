@@ -31,7 +31,7 @@
       "title": "Animék",
       "leiras": "asd",
       "szallitasiCim": "asd",
-      "csomagSuly": "asd",
+      "csomagSuly": 0,
       "start": "2023-10-06",
       "id": 7,
       "statusz": "kezbesitve"
@@ -39,9 +39,8 @@
     {
       "title": "próba235",
       "leiras": "asd",
-      "start": "2023-09-15",
-      "szallitasiCim": "haza",
-      "csomagSuly": "asd",
+      "start": "2023-09-15T08:30:00Z",
+      "csomagSuly": 0.8,
       "id": 8,
       "statusz": "uton"
     },
@@ -53,11 +52,10 @@
       "statusz": "elfogadva"
     },
     {
-      "title": "teszt22",
-      "start": "2023-09-09",
-      "szallitasiCim": "d",
-      "id": 10,
-      "statusz": "elfogadva"
+      "title": "valami új",
+      "szallitasiCim": "Szeged",
+      "statusz": "elfogadva",
+      "id": 11
     }
   ]
 }

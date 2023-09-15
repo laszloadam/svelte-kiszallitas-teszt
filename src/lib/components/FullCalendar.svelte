@@ -1,4 +1,4 @@
-<script async script lang="ts">
+<script lang="ts">
 	import { onMount } from 'svelte';
 	import { Calendar, type EventInput } from '@fullcalendar/core';
 	import dayGridPlugin from '@fullcalendar/daygrid';
@@ -86,6 +86,9 @@
 		events = await getEvents();
 	}
 </script>
+
+
+<h1 class="text-center mt-3">Kiszállítási naptár</h1>
 
 <div class="d-flex justify-content-center">
 	<div id="calendar" class="w-50 h-100" />

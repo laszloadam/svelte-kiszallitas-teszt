@@ -55,3 +55,10 @@ export async function serviceSave(event: any) {
 export function serviceHideDialog() {
     openDialog.update(() => false);
 }
+
+export function checkFormValidity(form:any) {
+    if (form) {
+        return form.checkValidity();
+    }
+    return false;
+}
